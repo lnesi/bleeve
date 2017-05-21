@@ -1,0 +1,19 @@
+{
+  "name": "bleeve",
+  "version": "1.0.0",
+  "description": "Bleeve Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lnesi/bleeve.git"
+  },
+  "author": "Luis Nesi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lnesi/bleeve/issues"
+  },
+  "homepage": "https://github.com/lnesi/bleeve#readme"
+}
