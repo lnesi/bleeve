@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.createjs.com/preloadjs-0.6.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://use.fontawesome.com/305feb8e9e.js"></script>
+</head>
+<body>
+	<div id="app" class="container">
+		<preloader ref="preloader"></preloader>
+	    <div>
+			<h1>Bleeve FrontEnd Test</h1>
+			<p> Top 10 most occurring words in the titles</p>
+			<select v-model="selectedTop" >
+				<option value="0">Select...</option>
+				<option value="1">Of the last 600 stories</option>
+				<option value="2">Of exactly the last week</option>
+				<option value="3">Of the last 60 stories of users with at least 10.000 karma</option>
+			</select>&nbsp;
+			<button @click="refresh()">Refresh</button>
+			
+			<hr>
+			<ul v-for="word in top" v-show="top.length>0">
+				<li >{{word.text|case}} : (<small>{{word.total}}</small>)</li>
+			</ul>
+			<p v-show="top.length==0">No Results</p>
+		</div>
+	</div>
+ <script src="js/app.js"></script>
+</body>
+</html>

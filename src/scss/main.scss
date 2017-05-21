@@ -1,0 +1,39 @@
+@import "variables";
+body{
+	background:$body-bg; 
+}
+
+#preloader{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    left: 0;
+    background: rgba(0,0,0,.75);
+    z-index: 1031;
+    color:#fff;
+    text-align: center;
+    &.fadeOut{
+        pointer-events: none;
+        opacity: 0;
+        -transition: opacity $duration ease-in-out;
+        -webkit-transition: opacity $duration ease-in-out;
+        -moz-transition: opacity $duration ease-in-out;
+        -ms-transition: opacity $duration ease-in-out;
+        -o-transition: opacity $duration ease-in-out;
+    }
+
+    &.fadeIn{
+        pointer-events: auto;
+        opacity: 1;
+        -transition: opacity $duration ease-in-out;
+        -webkit-transition: opacity $duration ease-in-out;
+        -moz-transition: opacity $duration ease-in-out;
+        -ms-transition: opacity $duration ease-in-out;
+        -o-transition: opacity $duration ease-in-out;
+    }
+    span{
+    	margin-top:10px;
+    	display:block;
+    }
+}
